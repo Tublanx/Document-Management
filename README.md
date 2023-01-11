@@ -13,8 +13,17 @@ git clone https://github.com/Tublanx/document-management-system
 ## Usage
 
 ```java
-// save at mysql with image, document's name, etc.
-DocumentService.save('idcard');
+// Save at mysql with image, document's name, etc.
+documentService.save('idcard');
+
+// Move document to another box
+documentService.transfer('idcard');
+
+// Discard document
+documentService.discardDoc('idcard');
+
+// Discard box
+documentService.discardBox('idcard');
 ```
 
 ## Contributing
