@@ -11,7 +11,7 @@ git clone https://github.com/Tublanx/document-management-system
 ```
 
 ## Usage
-
+Development has not been completed yet. I'll add more later.
 ```java
 // Save at mysql with image, document's name, etc.
 documentService.save('idcard');
