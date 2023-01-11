@@ -22,8 +22,10 @@ public class LoginMapperTest {
 	@DisplayName("조건에 맞는 유저 조회 테스트")
 	void selUserTest() throws Exception {
 		UserDto user = loginMapper.selUserByIdAndPwd("rlgus0823", "seon9053!");
+		int userExistsCount = loginMapper.selUserByIdAndPwdCount("rlgus0823", "seon9053!");
 
 		assertThat(user.getId()).isEqualTo(1);
+		assertThat(userExistsCount).isEqualTo(1);
 	}
 
 }
