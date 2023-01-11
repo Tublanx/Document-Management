@@ -1,10 +1,27 @@
 <!DOCTYPE HTML>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>로그인</title>
-    </head>
-    <body>
-        Hello, world!
-    </body>
+<html lang="ko" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>로그인</title>
+
+	<link rel="stylesheet" href="./css/login.css" />
+
+</head>
+
+<body>
+	<div class="form-box">
+		<div class="header-text">
+			서고관리시스템 로그인
+		</div>
+		<form action="/login/login.do" method="post" name="loginForm">
+			<input name="userId" placeholder="아이디" type="text" required>
+			<input name="userPwd" placeholder="비밀번호" type="password" required>
+			<span><a href="/register">회원가입</a></span>
+			<button type="submit">로그인</button>
+		</form>
+	</div>
+</body>
+
 </html>
