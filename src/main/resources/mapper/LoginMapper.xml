@@ -9,4 +9,11 @@
 			 where user_id = '${userId}'
 			   and user_pwd = '${userPwd}'
 	</select>
+	
+	<select id="selUserByIdAndPwdCount" parameterType="String" resultType="int">
+		select count(1)
+			  from user
+			 where user_id = '${userId}'
+			   and user_pwd = '${userPwd}'
+	</select>
 </mapper>
