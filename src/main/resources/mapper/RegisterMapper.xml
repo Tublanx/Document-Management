@@ -27,4 +27,10 @@
 			)
 		]]>
 	</insert>
+
+	<select id="selUserByUserIdCount" parameterType="String" resultType="int">
+		select count(1)
+			  from user
+			 where user_id = '${userId}'
+	</select>
 </mapper>
