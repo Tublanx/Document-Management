@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.khfc.documentmng.mapper.LoginMapper;
 import com.khfc.documentmng.service.LoginService;
 
 import lombok.RequiredArgsConstructor;
@@ -18,8 +17,6 @@ import lombok.RequiredArgsConstructor;
 public class LoginController {
 
 	private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
-
-	private final LoginMapper loginMapper;
 
 	private final LoginService loginService;
 
