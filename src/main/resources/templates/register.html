@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="ko" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 	<meta charset="utf-8">
@@ -15,7 +15,7 @@
 		<div class="header-text">
 			서고관리시스템 회원가입
 		</div>
-		<form action="/register/register.do" method="post" name="registerForm">
+		<form action="/register/register.do" method="post">
 			<input name="userId" placeholder="아이디" type="text" required>
 			<input name="userPwd" placeholder="비밀번호" type="password" required>
 			<input name="userName" placeholder="이름" type="text" required>
