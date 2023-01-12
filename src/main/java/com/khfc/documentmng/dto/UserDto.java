@@ -1,8 +1,10 @@
 package com.khfc.documentmng.dto;
 
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @NoArgsConstructor
+@Setter
 public class UserDto {
 
 	private Long id;
@@ -61,5 +63,5 @@ public class UserDto {
 	public String getUserPwd() {
 		return userPwd;
 	}
-
+	
 }
