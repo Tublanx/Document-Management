@@ -19,4 +19,9 @@ public class RegisterServiceImpl implements RegisterService {
 		registerMapper.insertUser(userDto);
 	}
 
+	@Override
+	public int selUserByUserIdCount(String userId) {
+		return registerMapper.selUserByUserIdCount(userId);
+	}
+
 }

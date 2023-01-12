@@ -8,5 +8,7 @@ import com.khfc.documentmng.dto.UserDto;
 public interface RegisterMapper {
 
 	public void insertUser(UserDto userDto);
+	
+	public int selUserByUserIdCount(String userId);
 
 }
