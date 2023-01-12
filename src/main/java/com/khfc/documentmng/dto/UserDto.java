@@ -1,11 +1,14 @@
 package com.khfc.documentmng.dto;
 
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
 public class UserDto {
 
-private Long id;
-	
+	private Long id;
+
 	private String userId;
-	
+
 	private String userPwd;
 
 	private String userName;
@@ -18,6 +21,14 @@ private Long id;
 
 	private String role;
 
+	public UserDto(String userId, String userPwd, String userName, int userAge, String userPhone, String userBirth) {
+		this.userId = userId;
+		this.userPwd = userPwd;
+		this.userName = userName;
+		this.userAge = userAge;
+		this.userPhone = userPhone;
+		this.userBirth = userBirth;
+	}
 
 	public String getUserName() {
 		return userName;
@@ -43,13 +54,12 @@ private Long id;
 		return id;
 	}
 
-	
 	public String getUserId() {
 		return userId;
 	}
-	
+
 	public String getUserPwd() {
 		return userPwd;
 	}
-	
+
 }
