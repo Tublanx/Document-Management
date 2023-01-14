@@ -19,11 +19,11 @@ documentService.save('idcard');
 // Move document to another box
 documentService.transfer('idcard');
 
-// Discard document
-documentService.discardDoc('idcard');
+// Delete document
+documentService.deleteDoc('idcard');
 
-// Discard box
-documentService.discardBox('idcard');
+// Delete box
+documentService.deleteBox('idcard');
 ```
 
 ## Contributing
