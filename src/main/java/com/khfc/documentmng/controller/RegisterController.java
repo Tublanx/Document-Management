@@ -30,12 +30,12 @@ public class RegisterController {
 		int userExistsCount = registerService.selUserByUserIdCount(userDto.getUserId());
 
 		if (userExistsCount > 0) {
-			return "register";
-//			result.rejectValue("userId", null, "이미 존재하는 아이디입니다.");
+			logger.error("존재하지 않는 정보입니다.");
+			return "redirect:/register";
 		}
 
 		registerService.insertUser(userDto);
-		return "login";
+		return "redirect:/login";
 	}
 
 }
