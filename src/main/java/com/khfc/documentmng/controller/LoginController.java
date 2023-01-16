@@ -1,15 +1,21 @@
 package com.khfc.documentmng.controller;
 
+import java.security.Principal;
+import java.util.HashMap;
+import java.util.Map;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.khfc.documentmng.service.LoginService;
 
+import jakarta.servlet.http.HttpSession;
 import lombok.RequiredArgsConstructor;
 
 @Controller
@@ -26,8 +32,8 @@ public class LoginController {
 	}
 
 	@PostMapping(value = "/login/login.do")
-	public String newMainForm(@RequestParam("userId") String userId, @RequestParam("userPwd") String userPwd,
-			Model model) {
+	public String login(@RequestParam("userId") String userId, @RequestParam("userPwd") String userPwd, Model model,
+			HttpSession session) {
 
 		model.addAttribute("userId", userId);
 		model.addAttribute("userPwd", userPwd);
@@ -39,7 +45,8 @@ public class LoginController {
 
 		if (userExistsCount > 0) {
 			loginService.selUserByIdAndPwd(userId, userPwd);
-			return "main";
+			session.setAttribute("userId", userId);
+			return "redirect:/main";
 		} else {
 			logger.error("정보가 존재하지 않습니다.");
 			return "redirect:/login";
