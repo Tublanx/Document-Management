@@ -1,14 +1,46 @@
 <!DOCTYPE HTML>
-<html lang="ko" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>서고관리시스템</title>
+
+	<link rel="stylesheet" href="/css/main.css" />
+
 </head>
 
 <body>
-	Hello, <p th:text="${userId}"></p>
+	<!-- 헤더 부분 -->
+	<header>
+		<a class="head1" href="/main">서고관리시스템</a>
+		<div class="head2" th:text="${userId} + 님"></div>
+	</header>
+
+	<!-- 메뉴바 부분 -->
+	<nav class="menu">
+		<div class="dropdown">
+			<button class="dropbtn">
+				문서 입출고
+			</button>
+			<div class="dropdown-content">
+				<a href="#">profile</a>
+				<a href="#">write a post</a>
+				<a href="#">settings</a>
+			</div>
+		</div>
+
+		<div class="menu-log">
+			<a href="/login" onclick="backEvt()">로그아웃</a>
+		</div>
+	</nav>
+
+	<!-- 중간 부분 -->
+	<main class="body_section">
+		<section id="content">
+			<h3>Content section</h3>
+		</section>
+	</main>
 </body>
 
 </html>
