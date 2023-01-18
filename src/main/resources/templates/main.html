@@ -7,6 +7,11 @@
 	<title>서고관리시스템</title>
 
 	<link rel="stylesheet" href="/css/main.css" />
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+	<!-- Material Icons CSS -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 </head>
 
@@ -18,21 +23,34 @@
 	</header>
 
 	<!-- 메뉴바 부분 -->
-	<nav class="menu">
-		<div class="dropdown">
-			<button class="dropbtn">
-				문서 입출고
-			</button>
-			<div class="dropdown-content">
-				<a href="#">profile</a>
-				<a href="#">write a post</a>
-				<a href="#">settings</a>
-			</div>
+	<nav>
+		<div>
+			<i class="material-icons">menu</i>
 		</div>
-
-		<div class="menu-log">
-			<a href="/login" onclick="backEvt()">로그아웃</a>
-		</div>
+		<ul>
+			<li>
+				<a href="#">문서입출고</a>
+				<ul>
+					<li><a href="/main/addDoc">문서입고처리</a></li>
+					<li><a href="/main/outDoc">문서출고처리</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">문서관리</a>
+				<ul>
+					<li><a href="/main/moveDoc">문서위치이동</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">사용자 관리</a>
+				<ul>
+					<li><a href="/main/usrPermissionMng">사용자별 권한 관리</a></li>
+					<li><a href="/main/editProfile">내 정보 수정</a></li>
+				</ul>
+			</li>
+			<li><a href="'/main/setting">설정</a></li>
+			<li><a href="/login">로그아웃</a></li>
+		</ul>
 	</nav>
 
 	<!-- 중간 부분 -->
@@ -41,6 +59,9 @@
 			<h3>Content section</h3>
 		</section>
 	</main>
+
+	<script src="/js/main.js"></script>
+
 </body>
 
 </html>
