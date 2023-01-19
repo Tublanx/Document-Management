@@ -3,14 +3,16 @@ package com.khfc.documentmng.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
+@RequestMapping(value = "/main")
 public class MainConbtroller {
 
-	@GetMapping(value = "/main")
+	@GetMapping(value = "")
 	public String main(HttpServletRequest request, Model model) {
 
 		HttpSession session = request.getSession();
@@ -28,6 +30,36 @@ public class MainConbtroller {
 		model.addAttribute("userId", userId);
 
 		return "main";
+	}
+
+	@GetMapping(value = "/addDoc")
+	public String addDocForm() {
+		return "doc/addDoc";
+	}
+
+	@GetMapping(value = "/outDoc")
+	public String outDocForm() {
+		return "doc/outDoc";
+	}
+
+	@GetMapping(value = "/moveDoc")
+	public String moveDocForm() {
+		return "docmng/moveDoc";
+	}
+
+	@GetMapping(value = "/usrPermissionMng")
+	public String userPermissionMngForm() {
+		return "usermng/permissionMng";
+	}
+
+	@GetMapping(value = "/editProfile")
+	public String editProfileForm() {
+		return "usermng/editProfile";
+	}
+
+	@GetMapping(value = "/setting")
+	public String settingForm() {
+		return "setting/setting";
 	}
 
 }
