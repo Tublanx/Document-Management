@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="headerFragment">
+	<!-- 헤더 부분 -->
+	<header>
+		<a class="head1" href="/main">서고관리시스템</a>
+		<div class="head2" th:text="${userId} + 님"></div>
+	</header>
+
+	<!-- 메뉴바 부분 -->
+	<nav>
+		<div>
+			<i class="material-icons">menu</i>
+		</div>
+		<ul>
+			<li>
+				<a>문서입출고</a>
+				<ul>
+					<li><a href="/main/addDoc">문서입고처리</a></li>
+					<li><a href="/main/outDoc">문서출고처리</a></li>
+				</ul>
+			</li>
+			<li>
+				<a>문서관리</a>
+				<ul>
+					<li><a href="/main/moveDoc">문서위치이동</a></li>
+				</ul>
+			</li>
+			<li>
+				<a>사용자 관리</a>
+				<ul>
+					<li><a href="/main/usrPermissionMng">사용자별 권한 관리</a></li>
+					<li><a href="/main/editProfile">내 정보 수정</a></li>
+				</ul>
+			</li>
+			<li><a href="'/main/setting">설정</a></li>
+			<li><a href="/login">로그아웃</a></li>
+		</ul>
+	</nav>
+</th:block>
