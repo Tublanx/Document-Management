@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
-<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/default_layout">
 
 <head>
 	<meta charset="utf-8">
@@ -16,52 +17,16 @@
 </head>
 
 <body>
-	<!-- 헤더 부분 -->
-	<header>
-		<a class="head1" href="/main">서고관리시스템</a>
-		<div class="head2" th:text="${userId} + 님"></div>
-	</header>
 
-	<!-- 메뉴바 부분 -->
-	<nav>
-		<div>
-			<i class="material-icons">menu</i>
-		</div>
-		<ul>
-			<li>
-				<a href="#">문서입출고</a>
-				<ul>
-					<li><a href="/main/addDoc">문서입고처리</a></li>
-					<li><a href="/main/outDoc">문서출고처리</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="#">문서관리</a>
-				<ul>
-					<li><a href="/main/moveDoc">문서위치이동</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="#">사용자 관리</a>
-				<ul>
-					<li><a href="/main/usrPermissionMng">사용자별 권한 관리</a></li>
-					<li><a href="/main/editProfile">내 정보 수정</a></li>
-				</ul>
-			</li>
-			<li><a href="'/main/setting">설정</a></li>
-			<li><a href="/login">로그아웃</a></li>
-		</ul>
-	</nav>
+	<th:block th:replace="~{fragments/main_header :: headerFragment}"></th:block>
 
 	<!-- 중간 부분 -->
 	<main class="body_section">
-		<section id="content">
-			<h3>Content section</h3>
-		</section>
+		<img alt="서고관리시스템" src="/img/Document-management-system.jpg">
 	</main>
 
-	<script src="/js/main.js"></script>
 
+	<script src="/js/main.js"></script>
 </body>
 
 </html>
