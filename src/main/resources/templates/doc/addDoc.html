@@ -1,14 +1,63 @@
 <!DOCTYPE HTML>
-<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="layout/default_layout">
 
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>서고관리시스템</title>
+	<title>서고관리시스템 - 문서입고처리</title>
+
+	<link rel="stylesheet" href="/css/main.css" />
+	<link rel="stylesheet" href="/css/doc/addDoc.css" />
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+	<!-- Material Icons CSS -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 </head>
 
 <body>
-	Hello, world!
+
+	<th:block th:replace="~{fragments/main_header :: headerFragment}"></th:block>
+
+	<div class="search_view">
+		<form action="/main/addDoc/search.do" method="post" name="addDocSearchForm">
+			<label for="문서번호">문서번호</label><input name="docNo" type="text">
+			<label for="문서이름">문서이름</label><input name="docName" type="text">
+			<label for="날짜">날짜</label>
+			<input name="startDate" type="date">
+			<label for="~">~</label>
+			<input name="endDate" type="date">
+			<button class="searchBtn" type="submit">검색</button>
+		</form>
+	</div>
+
+	<div class="table_view">
+		<table>
+			<thead>
+				<tr>
+					<th class="pin"></th>
+					<th>No</th>
+					<th>문서번호</th>
+					<th>문서이름</th>
+					<th>입고자</th>
+					<th>입고날짜</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr th:each="documents : ${documentList}">
+					<td><span th:text="${documents.id}"></span></td>
+					<td><span th:text="${documents.docNum}"></span></td>
+					<td><span th:text="${documents.docName}"></span></td>
+					<td><span th:text="${documents.regName}"></span></td>
+					<td><span th:text="${documents.regDate}"></span></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
 </body>
 
 </html>
