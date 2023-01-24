@@ -1,10 +1,12 @@
 package com.khfc.documentmng.dto;
 
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @NoArgsConstructor
 @Setter
+@Getter
 public class UserDto {
 
 	private Long id;
@@ -30,38 +32,6 @@ public class UserDto {
 		this.userAge = userAge;
 		this.userPhone = userPhone;
 		this.userBirth = userBirth;
-	}
-
-	public String getUserName() {
-		return userName;
-	}
-
-	public int getUserAge() {
-		return userAge;
-	}
-
-	public String getUserPhone() {
-		return userPhone;
-	}
-
-	public String getUserBirth() {
-		return userBirth;
-	}
-
-	public String getRole() {
-		return role;
-	}
-
-	public Long getId() {
-		return id;
-	}
-
-	public String getUserId() {
-		return userId;
-	}
-
-	public String getUserPwd() {
-		return userPwd;
 	}
 	
 }
