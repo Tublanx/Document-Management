@@ -8,7 +8,7 @@ $(document).ready(function() {
 		let month = today.getMonth() + 1;  // 월
 		let date = today.getDate();  // 날짜
 
-		link.download = year + month + date + id + ".xls";
+		link.download = year + month + date + id + ".xlsx";
 		link.href = 'data:, ' + $('#exceldownload').text();
 		link.click();
 	});
