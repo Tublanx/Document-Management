@@ -16,8 +16,6 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class MainConbtroller {
 
-	private final AddDocService addDocService;
-
 	@GetMapping(value = "")
 	public String main(HttpServletRequest request, Model model) {
 
@@ -36,14 +34,6 @@ public class MainConbtroller {
 		model.addAttribute("userId", userId);
 
 		return "main";
-	}
-
-	@GetMapping(value = "/addDoc")
-	public String addDocForm(Model model) {
-
-		model.addAttribute("documentList", addDocService.selDocuments());
-
-		return "doc/addDoc";
 	}
 
 	@GetMapping(value = "/outDoc")
