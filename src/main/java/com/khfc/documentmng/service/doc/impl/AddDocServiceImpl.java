@@ -1,5 +1,6 @@
 package com.khfc.documentmng.service.doc.impl;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -20,5 +21,12 @@ public class AddDocServiceImpl implements AddDocService {
 	public List<DocumentDto> selDocuments() {
 		return addDocMapper.selDocuments();
 	}
+
+	@Override
+	public List<DocumentDto> search(String docNo, String docName, LocalDate startDate, LocalDate endDate) {
+		List<DocumentDto> documentList = addDocMapper.search(docNo, docName, startDate, endDate);
+		return documentList;
+	}
+
 
 }

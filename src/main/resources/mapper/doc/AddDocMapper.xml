@@ -7,4 +7,8 @@
 		SELECT *
 		  FROM DOCUMENT
 	</select>
+	
+	<select id="search" resultType="com.khfc.documentmng.dto.DocumentDto">
+		
+	</select>
 </mapper>
