@@ -1,4 +1,4 @@
-package com.khfc.documentmng.mapper;
+package com.khfc.documentmng.mapper.doc;
 
 import java.util.List;
 

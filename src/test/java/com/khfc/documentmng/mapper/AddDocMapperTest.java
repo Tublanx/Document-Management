@@ -13,6 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.khfc.documentmng.controller.LoginController;
 import com.khfc.documentmng.dto.DocumentDto;
+import com.khfc.documentmng.mapper.doc.AddDocMapper;
 
 @AutoConfigureTestDatabase(replace = Replace.NONE)
 @SpringBootTest

@@ -3,10 +3,9 @@ package com.khfc.documentmng.controller.doc;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.khfc.documentmng.service.AddDocService;
+import com.khfc.documentmng.service.doc.AddDocService;
 
 import lombok.RequiredArgsConstructor;
 

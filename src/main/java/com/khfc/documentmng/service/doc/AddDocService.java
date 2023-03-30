@@ -1,4 +1,4 @@
-package com.khfc.documentmng.service;
+package com.khfc.documentmng.service.doc;
 
 import java.util.List;
 

@@ -1,12 +1,12 @@
-package com.khfc.documentmng.service.impl;
+package com.khfc.documentmng.service.doc.impl;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
 import com.khfc.documentmng.dto.DocumentDto;
-import com.khfc.documentmng.mapper.AddDocMapper;
-import com.khfc.documentmng.service.AddDocService;
+import com.khfc.documentmng.mapper.doc.AddDocMapper;
+import com.khfc.documentmng.service.doc.AddDocService;
 
 import lombok.RequiredArgsConstructor;
 
